@@ -1,0 +1,19 @@
+<ul class="list-group w-100" *ngFor = " let task of todos">
+    <li class="list-group-item d-flex justify-content-between w-100">
+        <span>
+            <input 
+            (change) = "changeTaskStatus(task)"
+            type="checkbox" [checked]="task.isCompleted">
+        </span>
+        <span [ngClass]="{ completed: task.isCompleted }">
+            {{ task.title | titlecase }}
+        </span>
+        <span [ngClass]="{ completed: task.isCompleted }">
+            {{ task.date | date}}
+        </span>
+        <span>
+             <fa-icon 
+             (click)="deleteTask(task)" [icon]="trash"></fa-icon>
+        </span>
+    </li>
+</ul>

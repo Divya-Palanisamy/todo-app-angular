@@ -1,0 +1,13 @@
+<div class="input-group mt-3 mb-2 w-100">
+    
+    <input type="text" name="todo" 
+       placeholder="Enter a Task To Do"
+       class="form-control"
+       min="2" max="30" required
+       [(ngModel)]="taskTitle">
+    <div class="input-group-append">
+        <button 
+        (click)="addTask()"
+        class="btn btn-danger">Add Task</button>
+    </div>
+</div>

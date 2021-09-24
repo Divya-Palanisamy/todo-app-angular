@@ -1,0 +1,10 @@
+.completed {
+  color: rgb(99, 96, 96);
+  text-decoration: line-through;
+}
+fa-icon {
+  cursor: pointer;
+}
+fa-icon:hover {
+  color: gray;
+}
